@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="3;url=/">
+    <title>Redirecting...</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Oops! Page not found.</h1>
+        <p>Redirecting you to the home page in 3 seconds...</p>
+    </div>
+
+    <script>
+        // JavaScript fallback: Ensure we redirect to the correct base path
+        // This is crucial if your app is hosted at: username.github.io/repo-name/
+        const baseHref = "/"; 
+        setTimeout(() => {
+            window.location.replace(baseHref);
+        }, 3000);
+    </script>
+</body>
+</html>
